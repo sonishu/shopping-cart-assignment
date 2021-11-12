@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="categories-link" >
+        <div *ngFor = "let category of categories">
+            <div class="category-title">
+                {{ category.name }}
+            </div>
+        </div>
+    </div>
+    <div class="display-area">
+        <div class="tiles">
+            <div *ngFor = "let product of products">
+                <div class="tile">
+                    <div>{{ product.name }}</div>
+                    <img class= "image" src="{{ product.imageURL }}" alt="">
+                    <div class = "description">{{ product.description }}</div>
+                    <div class="buy-now">
+                        <div class="price">{{ product.price }}</div>
+                        <div class="button">Buy Now</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
