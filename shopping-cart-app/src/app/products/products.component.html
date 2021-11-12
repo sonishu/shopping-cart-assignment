@@ -10,11 +10,11 @@
         <div class="tiles">
             <div *ngFor = "let product of products">
                 <div class="tile">
-                    <div>{{ product.name }}</div>
+                    <div class= "title">{{ product.name }}</div>
                     <img class= "image" src="{{ product.imageURL }}" alt="">
                     <div class = "description">{{ product.description }}</div>
                     <div class="buy-now">
-                        <div class="price">{{ product.price }}</div>
+                        <div class="price">MRP Rs{{ product.price }}</div>
                         <div class="button">Buy Now</div>
                     </div>
                 </div>
