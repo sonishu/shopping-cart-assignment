@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    .options{
+        text-align: center;
+        .title{
+            font-size:20px;
+            font-weight: 500;
+        }
+        .description{
+            margin-top: 20px;
+        }
+    }
+   
+    .form{
+        input{      
+            border: none;
+            border-bottom: 1px solid rgb(13, 201, 235);
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: #D2042D;
+            color: white;
+            border: none;
+            margin:20px 0px;
+            cursor: pointer;
+            width: 164px;
+        }
+    }
+}

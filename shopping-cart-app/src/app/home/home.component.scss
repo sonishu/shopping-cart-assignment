@@ -1,3 +1,9 @@
 ::ng-deep .slick-dots {
     bottom: 0px
 }
+::ng-deep .slick-prev:before, .slick-next:before { 
+    color:black !important;
+}
+::ng-deep .slick-next:before { 
+    color:black !important;
+}

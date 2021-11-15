@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-category',
@@ -8,10 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CategoryComponent implements OnInit {
   
   @Input() category: any;
+  @Output() buttonClick = new EventEmitter();
 
   constructor() { }
   
   ngOnInit(): void {
   }
-  
+  public exploreProducts(category: string){
+    this.buttonClick.emit(category);
+  } 
+
 }

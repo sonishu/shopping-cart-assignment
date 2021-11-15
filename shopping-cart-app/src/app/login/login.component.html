@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="container">
+    <div class="options">
+        <div class="title">{{ option.title }}</div>
+        <p class="description">{{ option.description }}</p>
+    </div>
+    <form #signupForm = "ngForm" (ngSubmit)="onSubmit()" class="form">
+        <div *ngIf="option.title == 'Signup'; else login" >
+            <label for="firstName">First Name</label>
+            <br/>
+            <input type="text" id="firstName">
+            <br/>
+            <label for="lastName">Last Name</label>
+            <br/>
+            <input type="text" id="lastName">
+            <br/>
+            <label for="email">Email</label>
+            <br/>
+            <input type="text" id="email">
+            <br/>
+            <label for="password">Password</label>
+            <br/>
+            <input type="password" id="password">
+            <br/>
+            <label for="confirmPassword">Confirm Password</label>
+            <br/>
+            <input type="password" id="confirmPassword">
+            <br/>
+        </div>
+        <ng-template #login>
+            <label for="email">Email</label>
+            <br/>
+            <input type="text" id="email">
+            <br/>
+            <label for="password">Password</label>
+            <br/>
+            <input type="password" id="password">
+            <br/>
+        </ng-template>
+        <button class="button" type="submit">{{ option.title }}</button>
+    </form>
+</div>

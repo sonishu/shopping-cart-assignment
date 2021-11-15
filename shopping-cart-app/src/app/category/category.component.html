@@ -6,7 +6,7 @@
         <div class="metadata">
             <div class="title">{{ category.name }}</div>
             <div class="description">{{ category.description }}</div>
-            <div class="button"> Explore {{ category.name }} </div>
+            <div class="button" (click) = "exploreProducts(category.name)"> Explore {{ category.name }} </div>
         </div>
     </div>
     <ng-template #evenBlock>
@@ -14,7 +14,7 @@
             <div class="metadata">
                 <div class="title">{{ category.name }}</div>
                 <div class="description">{{ category.description }}</div>
-                <div class="button"> Explore {{ category.name }} </div>
+                <div class="button" (click) = "exploreProducts(category.name)"> Explore {{ category.name }} </div>
             </div>
             <div class="image">
                 <img src="{{ category.imageUrl }}" alt="">

@@ -348,10 +348,10 @@
     src="../assets/static/images/logo.png"
   />
   <span>
-    <a rourterLink="/">Home</a>
+    <a routerLink="/">Home</a>
   </span>
   <span>
-    <a routerLink="/products">Products</a>
+    <a [routerLink]="['/products', 'Beverages']" >Products</a>
   </span>
   <div class="spacer"></div>
   <div class=login-register>
@@ -362,13 +362,14 @@
       <a routerLink="/register">Register</a>
     </span>
   </div>
-  <span class="cart">
-    <span>
-      <img src="../assets/static/images/cart.svg" height=25px width=25px alt="">
+  <div>
+    <span class="cart">
+      <span>
+        <a routerLink="/cart"><img src="../assets/static/images/cart.svg" height=25px width=25px alt=""></a>   
+      </span>
+      <span>items</span>
     </span>
-    <span>items</span>
-  </span>
-    
+  </div>
 </div>
 
 <div class="content" role="main">

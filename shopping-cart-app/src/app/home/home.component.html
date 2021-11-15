@@ -6,7 +6,8 @@
             <img src="{{ slide.bannerImageUrl }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
+    <!-- <button (click) = "exploreProducts($event)">clickhere</button> -->
     <div *ngFor="let category of categories">
-        <app-category [category]="category"></app-category>
+        <app-category [category]="category" (buttonClick)='exploreProduct($event)'></app-category>
     </div>
 </div>
