@@ -78,18 +78,18 @@ export class ProductsComponent implements OnInit {
   }
 
   public addItem(product: any){
-    this.passData();
     for(let i = 0; i<this.items.length; i++){
       if(this.items[i].id === product.id){
         this.items[i].Quantity += 1;
+        this.dataShareService.cartData.next(this.items);
         return;
       }
     }
     let result = {...product, "Quantity": 1}
     this.items.push(result);
+    this.dataShareService.cartData.next(this.items);
   }
 
-  public passData(){
-    this.dataShareService.sendDataToOtherComponent(this.items);
-  }
+  
+  
 }

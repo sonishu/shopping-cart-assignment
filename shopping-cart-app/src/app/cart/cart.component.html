@@ -1,3 +1,34 @@
-<div *ngFor = "let item of cartItems">
-    <div>{{ item.id }}</div>
-</div>
+
+  <div class="container" >
+      <div class="header">
+        <span class="title">My Cart {{ itemCount }}</span>
+        <span class="cross-button" (click)="activeModal.dismiss('Cross click')">X</span>
+      </div>
+      <div *ngIf = "cartItems.length > 0">
+        <div class="metadata">
+            <div class="item-tile" *ngFor = "let item of cartItems">
+                <img class="image" src="{{ item.imageURL }}" alt="item Image">
+                <div>
+                    <p class="name">{{ item.name }}</p>
+                    <p >{{item.Quantity}} x Rs.{{item.price}}</p>
+                </div>
+                
+                <p class="price">Rs.{{ item.Quantity * item.price }}</p>
+            </div>
+            <div class="lowest-price">
+                <img src="../../assets/static/images/lowest-price.png" alt="lowest price">
+                <span>you won't find it cheaper anywhere</span>
+            </div>
+          </div>
+          <footer class="footer">
+            <p class="text">Promo code can be applied on payment page</p>
+            <button class="proceed-button">Proceed to checkout</button>
+          </footer>
+      </div>
+      <div class="no-items" *ngIf = "cartItems.length == 0">
+        <h3>No items in cart</h3>
+        <p>Your favourite items are just click away</p>
+    </div>
+      
+  </div>
+ 

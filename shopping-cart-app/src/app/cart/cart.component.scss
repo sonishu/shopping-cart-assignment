@@ -1,10 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+::ng-deep .modal-content { 
+    border: none;
+    border-radius: unset;
+}
 .container{
     background-color: #eaeaea;
-    .title{
-        background-color: white;
-        margin-bottom: 5px; 
+    min-height: 70vh;
+    .header {
+        display: flex;
+        background-color: #000;
+        justify-content: space-between;
+        color: #fff;
+        align-content: center;
+        font-size: 16px;
+        padding: 2px;
+        .title{
+            display: inline;
+        }
+        .cross-button{
+            padding: 2px;
+            justify-self: end;
+            cursor: pointer;
+        }
+        
     }
-    .items{
-        background-color: white;
+    .metadata {
+        .item-tile{
+            display: flex;
+            //justify-content: space-between;
+            gap: 5px;
+            margin: 3px 0;
+            background-color: #fff;
+            .image{
+                align-self: flex-start;
+                height: 50px;
+                width: auto;
+            }
+            .name {
+                font-size: 14px;
+                font-weight: bold;
+                justify-self: flex-start;
+            }
+            .quantity {
+                display: inline;
+                bottom: -30px;
+                right: 225px;
+                position: relative;
+            }
+            .price {
+                position: relative;
+                bottom: -30px;
+                right: 0;
+                display: inline;
+            }
+        }
+        .lowest-price{
+            display: flex;
+            justify-content: space-around;
+            margin: 18px;
+            align-items: center;
+            background-color: #fff;
+        }
+    }
+    .footer{
+        background-color: #fff;
+        padding: 10px;
+        .text{
+            margin: auto;
+        }
+        .proceed-button{
+            width: 100%;
+            border: none !important;
+            background-color: #D2042D;;
+            color: #fff;
+        }
+    }
+    .no-items {
+        margin: auto;
+
     }
 }
+

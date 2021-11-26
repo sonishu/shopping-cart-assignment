@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataShareService {
 
+  public cartData = new Subject<Product[]>();
   constructor() { }
-  shareDataSubject = new Subject<any>(); //Decalring new RxJs Subject
   
-  subj$ = this.shareDataSubject.asObservable();
- 
-     sendDataToOtherComponent(somedata:any){
-      this.shareDataSubject.next(somedata);
-  }
-
 }
